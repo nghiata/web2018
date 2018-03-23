@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BalatonBike - Sign up</title>
+  </head>
+  <body>
+    <header>
+      <img src="../images/logo.jpg" alt="BalatonBike.com">
+      <nav>
+        <a href="../index.html"> Home </a>
+        &nbsp
+        <a href="tours.html"> Tours </a>
+        &nbsp
+        <a href="signup.html"> Sign up </a> <br>
+      </nav>
+    </header>
+        <hr>
+        <br>
+        <h1> Join the tour! </h1>
+          <p>Please fill out the required (*) fields, then submit your application to one of the tours held <br>
+            by BalatonBike.com</p>
+    <form method="GET">
+      <p>
+        First Name* <input type="text" name="firstname" required>&nbsp;
+        Last Name* <input type="text" name="lastname" required>
+      </p>
+      <p>
+        E-mail* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" required>&nbsp;
+        Phone No. &nbsp;&nbsp;<input type="tel" name="phone" maxlength="11">
+      </p>
+      <p>
+        Tour starting date*
+        <select name="tdate" required>
+          <option value="1607">16.07.2018.</option>
+          <option value="0608">06.08.2018.</option>
+          <option value="2008">20.08.2018.</option>
+        </select><br>
+      </p>
+      <p>
+        Tour type*&nbsp;&nbsp;
+        <select name="ttype" required>
+          <option value="kid">for kids under 18 years</option>
+          <option value="adult">for adults above 18 years</option>
+        </select><br>
+      </p>
+      <p>
+        Tour length*
+        <input type="radio" name="tourlenght" value="short" required>15km
+        <input type="radio" name="tourlenght" value="med">50km
+        <input type="radio" name="tourlenght" value="long">100km
+        <input type="radio" name="tourlenght" value="xlong">200km<br>
+      </p>
+      <p>
+        <input type="submit" value="Sign Up">&nbsp;&nbsp;&nbsp;&nbsp;
+    		<input type="reset">
+      </p>
+    </form><hr>
+    <footer>
+      <address>
+        Contact us for further support through e-mail: <a href="mailto:balatonbike@example.com"> balatonbike@example.com</a>
+      </address>
+    </footer>
+  </body>
+</html>
