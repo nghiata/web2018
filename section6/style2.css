@@ -1,3 +1,17 @@
+html {
+    font-size: 14px;
+}
 h2 {
     color: blue;
+}
+p {
+    font-size: 20px;
+    margin: 10px;
+}
+span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: red;
+    text-transform: capitalize;
+    font: Georgia;
 }
