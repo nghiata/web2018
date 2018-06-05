@@ -1,0 +1,11 @@
+{
+  "name": "nghiata",
+  "version": "1.0.0",
+  "description": "npm example",
+  "main": "script.js",
+  "scripts": {
+    "build": "browserify script.js > bundle.js && live-server"
+  },
+  "author": "nghiata",
+  "license": "ISC"
+}

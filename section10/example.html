@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Exercise</title>
+</head>
+<body>
+    <script>
+    /**
+     * Exercise 3
+     */
+    function add() {
+        var firstNumber = prompt("the first number:");
+        var secondNumber = prompt("the second number:");
+        var sum = Number(firstNumber) + Number(secondNumber);
+        alert(firstNumber +" + "+ secondNumber +" = "+ sum);
+    }
+    function minus() {
+        var firstNumber = prompt("the first number:");
+        var secondNumber = prompt("the second number:");
+        var minus = Number(firstNumber) - Number(secondNumber);
+        alert(firstNumber +" - "+ secondNumber +" = "+ minus);
+    }
+    function multiple() {
+        var firstNumber = prompt("the first number:");
+        var secondNumber = prompt("the second number:");
+        var multiple = Number(firstNumber) * Number(secondNumber);
+        alert(firstNumber +" x "+ secondNumber +" = "+ multiple);
+    }
+    function devide() {
+        var firstNumber = prompt("the first number:");
+        var secondNumber = prompt("the second number:");
+        var devide = Number(firstNumber) / Number(secondNumber);
+        alert(firstNumber +" : "+ secondNumber +" = "+ devide);
+    }
+    /**
+     * Exercise 4
+     */
+    function keylessCar() {
+        var age = prompt("How old are you?");
+        if (age < 18) {
+            alert("Sorry, you are too young to drive this car. Powering off");
+        }
+        else if (age == 18) {
+            alert("Congratulations on your first year of driving. Enjoy the ride!");
+        }
+        else {
+            alert("Powering On. Enjoy the ride!");
+        }
+    }
+    </script>
+</body>
+</html>
