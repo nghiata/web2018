@@ -13,6 +13,7 @@ function createListElement() {
 	btn.classList.add('del');
 	btn.appendChild(document.createTextNode("Delete"));
 	li.appendChild(document.createTextNode(input.value));
+	li.innerHTML = li.innerHTML + '&nbsp;';
 	li.appendChild(btn);
 	ul.appendChild(li);
 	input.value = '';
@@ -26,17 +27,15 @@ function createListElement() {
 	}
 }
 
-function addListAfterClick() {
-	var currentLi = document.querySelectorAll("li");
-	if (inputLength() && currentLi.length < 10 && currentLi.length > 0) {
+function addListAfterClick() {	
+	if (inputLength()) {
 		createListElement();
 
 	}
 }
 
-function addListAfterKeypress(event) {
-	var currentLi = document.querySelectorAll("li");
-	if (inputLength() && currentLi.length < 10 && currentLi.length > 0 && event.keyCode === 13) {
+function addListAfterKeypress(event) {	
+	if (inputLength() && event.keyCode === 13) {
 		createListElement();
 	}
 }
@@ -48,5 +47,13 @@ for (let i=0; i<li.length; i++) {
 	let myLi = li[i];
 	myLi.addEventListener('click', function(event) {
 		myLi.classList.toggle("done");
+	});
+}
+// listen event delete button
+var deleteBtn = document.getElementsByClassName('del');
+for(let j=0; j<deleteBtn.length; j++) {
+	let delBtn = deleteBtn[j];		
+	delBtn.addEventListener('click', function(event) {	
+		delBtn.parentElement.remove();
 	});
 }
