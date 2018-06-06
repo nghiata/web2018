@@ -18,13 +18,7 @@ function createListElement() {
 	ul.appendChild(li);
 	input.value = '';
 	// listen event delete button
-	var deleteBtn = document.getElementsByClassName('del');
-	for(let j=0; j<deleteBtn.length; j++) {
-		let delBtn = deleteBtn[j];		
-		delBtn.addEventListener('click', function(event) {	
-			delBtn.parentElement.remove();
-		});
-	}
+	deleteLi();
 }
 
 function addListAfterClick() {	
@@ -40,6 +34,17 @@ function addListAfterKeypress(event) {
 	}
 }
 
+function deleteLi() {
+	// listen event delete button
+	var deleteBtn = document.getElementsByClassName('del');
+	for(let j=0; j<deleteBtn.length; j++) {
+		let delBtn = deleteBtn[j];		
+		delBtn.addEventListener('click', function(event) {	
+			delBtn.parentElement.remove();
+		});
+	}
+}
+
 button.addEventListener('click', addListAfterClick);
 input.addEventListener('keypress', addListAfterKeypress);
 // Toggle class .done when click li
@@ -49,11 +54,5 @@ for (let i=0; i<li.length; i++) {
 		myLi.classList.toggle("done");
 	});
 }
-// listen event delete button
-var deleteBtn = document.getElementsByClassName('del');
-for(let j=0; j<deleteBtn.length; j++) {
-	let delBtn = deleteBtn[j];		
-	delBtn.addEventListener('click', function(event) {	
-		delBtn.parentElement.remove();
-	});
-}
+
+deleteLi();
